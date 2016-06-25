@@ -3,83 +3,122 @@
  * https://github.com/facebook/react-native
  * @flow
  */
- // var React = require('react-native');
-import React, { Component } from 'react';
 
+import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Navigator,
   Text,
   View,
+  Navigator,
+  TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native';
 
-import Main from './Main';
-import Dashboard from './Dashboard';
-import Profile from './Profile';
+import Main from './Main.js';
+import Dashboard from './Dashboard.js';
+import Profile from './Profile.js';
+import Badge from './Badge.js';
+
 
 var NavigationBarRouteMapper = {
-  LeftButton: function( route, navigator, index, navState ){
-    return(
-      <Text>{ route.leftButton }</Text>
-    )
+  LeftButton(route, navigator, index, navState) {
+    if(index > 0) {
+      return (
+        <TouchableHighlight
+        	 underlayColor="transparent"
+           onPress={() => { if (index > 0) { navigator.pop() } }}>
+          <Text style={ styles.leftNavButtonText }>Back</Text>
+        </TouchableHighlight>
+  	)}
+  	else { return null }
   },
-  Title: function( route, navigator, index, navState ){
-    return(
-      <Text>{ route.title }</Text>
-    )
+  RightButton(route, navigator, index, navState) {
+    if (route.onPress) return ( <TouchableHighlight
+    														onPress={ () => route.onPress() }>
+                                <Text style={ styles.rightNavButtonText }>
+                                  	{ route.rightText || 'Right Button' }
+                                </Text>
+                              </TouchableHighlight> )
   },
-  RightButton: function( route, navigator, index, navState ){
-    return(
-      <Text>{ route.rightButton }</Text>
-    )
+  Title(route, navigator, index, navState) {
+    return <Text style={ styles.title }>Pioneer</Text>
   }
-}
+};
 
 
-
-class hank extends Component {
-
+class githubNoteTaker extends Component {
   renderScene(route, navigator){
-    if (route.title === 'Github Notetaker'){
+    if(route.title === 'Github Notetaker'){
       return <Main navigator={navigator} />
-    } else if (route.title === 'Dashboard'){
+    } else if (route.title === 'Dashboard') {
       return <Dashboard navigator={navigator} {...route.passProps} />
-    } else if (route.title === 'Profile'){
+    } else if (route.title === 'Profile Page') {
       return <Profile navigator={navigator} {...route.passProps} />
     }
   }
 
   render() {
     return (
+      // <Navigator
+      //  initialRoute={{title: 'Github Notetaker'}}
+      //  renderScene={this.renderScene.bind(this)}
+      //  navigationBar={
+      //    <Navigator.NavigationBar
+      //    routeMapper={ NavigationBarRouteMapper }
+      //    />
+      //  }
+      ///>
+
       <Navigator
-        initialRoute= {{title: 'Github Notetaker'}}
-        renderScene={this.renderScene.bind(this)}
+        style={{flex:1}}
+        initialRoute={{title: 'Github Notetaker'}}
+        renderScene={ this.renderScene.bind(this) }
         navigationBar={
           <Navigator.NavigationBar
-            routeMapper={ NavigationBarRouteMapper }
+            style={ styles.nav }
+            routeMapper={NavigationBarRouteMapper}
           />
         }
-        />
+      />
     );
   }
 }
 
 const styles = StyleSheet.create({
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  container:{
-    flex: 1,
-    backgroundColor: '#111111'
-  },
+  mainContainer: {
+    	flex: 4,
+      flexDirection: 'column',
+      marginTop:100
+    },
+    leftNavButtonText: {
+    	fontSize: 18,
+      marginLeft:13,
+      marginTop:2
+    },
+    rightNavButtonText: {
+    	fontSize: 18,
+      marginRight:13,
+      marginTop:2
+    },
+    nav: {
+    	height: 60,
+      backgroundColor: '#efefef'
+    },
+    title: {
+    	marginTop:4,
+      fontSize:16
+    },
+    button: {
+    	height:60,
+      marginBottom:10,
+      backgroundColor: '#efefef',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    buttonText: {
+    	fontSize:18
+    },
 });
 
-AppRegistry.registerComponent('hank', () => hank);
+AppRegistry.registerComponent('githubNoteTaker', () => githubNoteTaker);

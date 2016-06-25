@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-class hank extends Component {
+class githubNoteTaker extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -49,4 +49,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('hank', () => hank);
+AppRegistry.registerComponent('githubNoteTaker', () => githubNoteTaker);

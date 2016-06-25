@@ -1,108 +1,108 @@
 import React, { Component } from 'react';
-
 import {
-  View,
-  Text,
   StyleSheet,
+  Text,
+  View,
   Navigator,
   TextInput,
   TouchableHighlight,
-  ActivityIndicator,
-} from 'react-native'
+  ActivityIndicator
+} from 'react-native';
 
-import api from './api';
-import Dashboard from './Dashboard';
+import api from './api.js'
+import Dashboard from './Dashboard.js'
 
-class Main extends Component{
-  constructor(props){
-    super(props);
+class Main extends Component {
+  constructor(){
+    super();
     this.state = {
       username: '',
       isLoading: false,
-      error: false,
+      error: false
     }
   }
 
-  handleChange(event){
-    this.setState({
-      username: event.nativeEvent.text
-    });
-  }
-
   handleSubmit(){
+    // update indicatorIOS spinner
+    // fetch data from Github
+    // reroute to the next passing the Github information
     this.setState({
       isLoading: true
     });
     api.getBio(this.state.username)
-    .then((res) => {
-      if(res.message === 'Not Found'){
-        this.setState({
-          error: 'User not found',
-          isLoading: false,
-        })
-      } else {
-        this.props.navigator.push({
-          // title: res.name || "Seclect an Option",
-          title: 'Dashboard',
-          // component: Dashboard,
-          passProps: {userInfo: res},
-        });
-        this.setState({
-          isLoading: false,
-          error: false,
-          username: '',
-        })
-      }
-    })
+      .then((response) => {
+        if(response.message === 'Not Found'){
+          this.setState({
+            error: 'User not found',
+            isLoading: false
+          })
+        } else {
+          console.log(response)
+          this.props.navigator.push({
+            title: 'Dashboard' || "Select an Option",
+            // component: Dashboard,
+            passProps: {userInfo: response}
+          });
+          this.setState({
+            isLoading: false,
+            error: false,
+            username: '',
+          })
+        }
+      })
   }
 
-  render(){
-    var showErr =(
+  render() {
+
+    var showErr = (
       this.state.error ? <Text> {this.state.error} </Text> : <View></View>
     )
-    var spinningAnimation = <ActivityIndicator
-      animating={this.state.animating}
-      color="#111"
-      size="large"></ActivityIndicator>
+
+    var spinnerAnimation = <ActivityIndicator
+                              animating={this.state.isLoading}
+                              color='#111'
+                              size='large'>
+                            </ActivityIndicator>
 
     var showSpinner = (
-      this.state.isLoading ? spinningAnimation : console.log('fail')
+      this.state.isLoading ? spinnerAnimation : console.log('Fail')
     )
-    return(
+
+    return (
       <View style={styles.mainContainer}>
-        <Text style={styles.title}>Search for a Country</Text>
+        <Text style={styles.title}> Search for a GitHub User </Text>
         <TextInput
-        style={styles.searchInput}
-        value={this.state.username}
-        onChange={this.handleChange.bind(this)} />
+          style={styles.searchInput}
+          value={this.state.username}
+          onChangeText={(text) => this.setState({username: text})}
+        />
         <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this)}
-          underlayColor="white">
-            <Text style={styles.buttonText}>SEARCH</Text>
+          underlayColor='white'>
+            <Text style={styles.buttonText}> SEARCH </Text>
         </TouchableHighlight>
         {showSpinner}
         {showErr}
       </View>
-
     )
   }
 }
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     padding: 30,
     marginTop: 65,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#48BBEC'
+    backgroundColor: '#48BBEC',
   },
   title: {
     marginBottom: 20,
     fontSize: 25,
     textAlign: 'center',
-    color: '#fff'
+    color: '#fff',
   },
   searchInput: {
     height: 50,
@@ -112,12 +112,12 @@ var styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'white',
     borderRadius: 8,
-    color: 'white'
+    color: 'white',
   },
   buttonText: {
     fontSize: 18,
     color: '#111',
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   button: {
     height: 45,
@@ -129,7 +129,8 @@ var styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     alignSelf: 'stretch',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 });
+
 export default Main;
