@@ -13,6 +13,7 @@ import {
   Navigator,
   TouchableHighlight,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 
 import Main from './Main.js';
@@ -34,12 +35,7 @@ var NavigationBarRouteMapper = {
   	else { return null }
   },
   RightButton(route, navigator, index, navState) {
-    if (route.onPress) return ( <TouchableHighlight
-    														onPress={ () => route.onPress() }>
-                                <Text style={ styles.rightNavButtonText }>
-                                  	{ route.rightText || 'Right Button' }
-                                </Text>
-                              </TouchableHighlight> )
+    return <Image source={require('./Image/search.png')} style={styles.image}/>
   },
   Title(route, navigator, index, navState) {
     return <Text style={ styles.title }>Pioneer</Text>
@@ -87,7 +83,7 @@ class githubNoteTaker extends Component {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    	flex: 4,
+    	flex: 1,
       flexDirection: 'column',
       marginTop:100
     },
@@ -101,13 +97,10 @@ const styles = StyleSheet.create({
       marginRight:13,
       marginTop:2
     },
-    nav: {
-    	height: 60,
-      backgroundColor: '#efefef'
-    },
     title: {
     	marginTop:4,
-      fontSize:16
+      fontSize:32,
+      paddingBottom: 10,
     },
     button: {
     	height:60,
@@ -119,6 +112,13 @@ const styles = StyleSheet.create({
     buttonText: {
     	fontSize:18
     },
+    image: {
+      marginTop: 5,
+      alignSelf: 'flex-end',
+    },
+    nav: {
+      backgroundColor: '#C8DDE5'
+    }
 });
 
 AppRegistry.registerComponent('githubNoteTaker', () => githubNoteTaker);

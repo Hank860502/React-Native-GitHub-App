@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     marginTop: 65,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#48BBEC',
+    backgroundColor: '#0a95d0',
   },
   title: {
     marginBottom: 20,
