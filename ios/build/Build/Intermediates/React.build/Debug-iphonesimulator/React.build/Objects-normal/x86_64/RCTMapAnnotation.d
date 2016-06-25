@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/React/Views/RCTMapAnnotation.m \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/React/Views/RCTMapAnnotation.h
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/React/Views/RCTMapAnnotation.m \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/React/Views/RCTMapAnnotation.h

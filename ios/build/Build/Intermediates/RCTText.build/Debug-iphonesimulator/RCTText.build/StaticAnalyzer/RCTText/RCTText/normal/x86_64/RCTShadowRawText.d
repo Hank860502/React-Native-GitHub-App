@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTShadowRawText.m \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTShadowRawText.m \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
   ../../React/Views/RCTShadowView.h ../../React/Layout/Layout.h \
   ../../React/Views/RCTComponent.h ../../React/Base/RCTRootView.h \
   ../../React/Base/RCTBridge.h ../../React/Base/RCTBridgeDelegate.h \

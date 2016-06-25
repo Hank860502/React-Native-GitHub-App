@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTTextField.m \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTTextField.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTTextField.m \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTTextField.h \
   ../../React/Views/RCTComponent.h ../../React/Base/RCTConvert.h \
   ../../React/Layout/Layout.h ../../React/Views/RCTAnimationType.h \
   ../../React/Views/RCTBorderStyle.h \

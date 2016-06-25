@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTTextViewManager.m \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTTextViewManager.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTTextViewManager.m \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTTextViewManager.h \
   ../../React/Views/RCTViewManager.h ../../React/Base/RCTBridgeModule.h \
   ../../React/Base/RCTDefines.h ../../React/Base/RCTConvert.h \
   ../../React/Layout/Layout.h ../../React/Views/RCTAnimationType.h \
@@ -13,5 +13,5 @@ dependencies: \
   ../../React/Base/RCTInvalidating.h \
   ../../React/Base/RCTJavaScriptExecutor.h \
   ../../React/Views/RCTShadowView.h ../../React/Base/RCTRootView.h \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTTextView.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTTextView.h \
   ../../React/Views/RCTView.h ../../React/Views/UIView+React.h

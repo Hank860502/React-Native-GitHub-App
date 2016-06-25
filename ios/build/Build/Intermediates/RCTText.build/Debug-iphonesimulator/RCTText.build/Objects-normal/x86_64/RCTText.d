@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTText.m \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTText.h \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Text/RCTShadowText.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTText.m \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTText.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Text/RCTShadowText.h \
   ../../React/Views/RCTShadowView.h ../../React/Layout/Layout.h \
   ../../React/Views/RCTComponent.h ../../React/Base/RCTRootView.h \
   ../../React/Base/RCTBridge.h ../../React/Base/RCTBridgeDelegate.h \

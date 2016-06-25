@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Image/RCTImageView.m \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Image/RCTImageView.h \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Image/RCTImageView.m \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Image/RCTImageView.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
   ../../React/Base/RCTConvert.h ../../React/Layout/Layout.h \
   ../../React/Views/RCTAnimationType.h \
   ../../React/Views/RCTBorderStyle.h \
@@ -13,11 +13,11 @@ dependencies: \
   ../../React/Base/RCTInvalidating.h \
   ../../React/Base/RCTJavaScriptExecutor.h \
   ../../React/Base/RCTEventDispatcher.h \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
   ../../React/Base/RCTURLRequestHandler.h \
   ../../React/Base/RCTURLRequestDelegate.h \
   ../../React/Base/RCTImageSource.h \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
   ../../React/Base/RCTUtils.h \
-  /Users/hank8652/Desktop/hank/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.h \
+  /Users/hank8652/Desktop/React-Native-GitHub-App/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.h \
   ../../React/Views/UIView+React.h ../../React/Views/RCTComponent.h
