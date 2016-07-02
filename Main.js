@@ -65,7 +65,7 @@ class Main extends Component {
                             </ActivityIndicator>
 
     var showSpinner = (
-      this.state.isLoading ? spinnerAnimation : console.log('Fail')
+      this.state.isLoading ? spinnerAnimation : console.log('Fail') 
     )
 
     return (
